@@ -1,4 +1,4 @@
-<h2>Edit A Post</h2>
+<h2>Create A Post</h2>
 <%= form_tag posts_path, method: "post" do %>
 
 <% if @post.errors.any? %>
@@ -24,9 +24,9 @@
   
 
   <div class="field<%= ' field_with_errors' if @post.errors[:content].any? %>">
-    <%= label_tag "content", "Content" %>
+    <%= label_tag "content", "content" %>
     <%= text_area_tag "content", @post.content %>
   </div>
 
-  <%= submit_tag "Update" %>
+  <%= submit_tag "Create" %>
 <% end %>
